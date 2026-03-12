@@ -27,15 +27,15 @@ const ContactForm = () => {
             <div className="space-y-4 text-sm text-muted-foreground">
               <div className="flex items-center gap-3">
                 <Phone size={16} className="text-primary" />
-                <span>Krutik Patel: +91 7043536163</span>
+                <span>+91 7043536163</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={16} className="text-primary" />
-                <span>Het Patel: +91 9428026779</span>
+                <span>+91 9428026779</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={16} className="text-primary" />
-                <span>het.hktech@gmail.com</span>
+                <span>hetpatel.hktech@gmail.com</span>
               </div>
             </div>
           </div>

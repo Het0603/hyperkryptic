@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
@@ -7,7 +8,69 @@ import heroLights from "@/assets/hero-lights.jpg";
 import heroFurniture from "@/assets/hero-furniture.jpg";
 import { ArrowRight, Lightbulb, Sofa, Globe, Award } from "lucide-react";
 
+import ms30UltraThinCover from "@/assets/ms30-ultra-thin-cover.jpg";
+import ms30LightModules from "@/assets/ms30-light-modules.jpg";
+import beltLinkHomeScene from "@/assets/beltlink-home-scene.jpg";
+import beltLinkLightModules from "@/assets/beltlink-light-modules.jpg";
+
+import chairModern from "@/assets/chair-modern-b2520.jpg";
+import sofaModern from "@/assets/sofa-modern-madison.jpg";
+import tableModern from "@/assets/table-modern-dt6622.jpg";
+import chairClassic from "@/assets/chair-classic-b2517.jpg";
+import sofaClassic from "@/assets/sofa-classic-pierre.jpg";
+import cabinetClassic from "@/assets/cabinet-classic-dx6609.jpg";
+import chairElegant from "@/assets/chair-elegant-b2515.jpg";
+import sofaElegant from "@/assets/sofa-elegant-freeman.jpg";
+import tableElegant from "@/assets/table-elegant-dt6604.jpg";
+import cabinetElegant from "@/assets/cabinet-elegant-dx6606.jpg";
+import cabinetModern from "@/assets/cabinet-modern-dx6604.jpg";
+
+const backgroundPreloadAssets = [
+  heroLights,
+  heroFurniture,
+  ms30UltraThinCover,
+  ms30LightModules,
+  beltLinkHomeScene,
+  beltLinkLightModules,
+  chairModern,
+  sofaModern,
+  tableModern,
+  chairClassic,
+  sofaClassic,
+  cabinetClassic,
+  chairElegant,
+  sofaElegant,
+  tableElegant,
+  cabinetElegant,
+  cabinetModern,
+];
+
 const Index = () => {
+  useEffect(() => {
+    const prefetchedLinks: HTMLLinkElement[] = [];
+
+    const timer = window.setTimeout(() => {
+      backgroundPreloadAssets.forEach((src) => {
+        const image = new Image();
+        image.decoding = "async";
+        image.src = src;
+      });
+
+      const videoPrefetch = document.createElement("link");
+      videoPrefetch.rel = "prefetch";
+      videoPrefetch.as = "video";
+      videoPrefetch.href = "/videos/lights-showcase.mp4";
+      videoPrefetch.dataset.preload = "true";
+      document.head.appendChild(videoPrefetch);
+      prefetchedLinks.push(videoPrefetch);
+    }, 500);
+
+    return () => {
+      window.clearTimeout(timer);
+      prefetchedLinks.forEach((link) => link.remove());
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -23,10 +86,10 @@ const Index = () => {
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-light text-foreground mb-6 animate-fade-up">
             Hyper<span className="text-gradient-gold">Kryptic</span>
           </h1>
-          <p className="font-body text-muted-foreground text-lg md:text-xl max-w-2xl mb-10 animate-fade-up" style={{ animationDelay: '0.2s' }}>
+          <p className="font-body text-muted-foreground text-lg md:text-xl max-w-2xl mb-10 animate-fade-up" style={{ animationDelay: "0.2s" }}>
             Premium designer interior lights & luxury furniture, sourced from world-class manufacturers
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: '0.4s' }}>
+          <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: "0.4s" }}>
             <Link to="/lights" className="bg-primary text-primary-foreground px-8 py-4 font-body text-sm tracking-widest uppercase hover:opacity-90 transition-opacity">
               Explore Lights
             </Link>
