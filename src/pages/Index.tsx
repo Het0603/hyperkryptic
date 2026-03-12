@@ -30,6 +30,8 @@ import cabinetModern from "@/assets/cabinet-modern-dx6604.jpg";
 const backgroundPreloadAssets = [
   heroLights,
   heroFurniture,
+  showroom1,
+  showroom2,
   ms30UltraThinCover,
   ms30LightModules,
   beltLinkHomeScene,
