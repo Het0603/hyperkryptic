@@ -45,7 +45,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-border text-center">
           <p className="text-muted-foreground text-xs tracking-widest uppercase">
-            © {new Date().getFullYear()} HyperKryptic Global Pvt Ltd. All rights reserved.
+            © {new Date().getFullYear()} HyperKryptic. All rights reserved.
           </p>
         </div>
       </div>
