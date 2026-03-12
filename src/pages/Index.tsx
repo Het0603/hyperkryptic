@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ContactForm from "@/components/ContactForm";
 import heroHome from "@/assets/hero-home.jpg";
 import heroLights from "@/assets/hero-lights.jpg";
 import heroFurniture from "@/assets/hero-furniture.jpg";
@@ -13,34 +14,23 @@ const Index = () => {
 
       {/* Hero */}
       <section className="relative h-screen overflow-hidden">
-        <img
-          src={heroHome}
-          alt="Luxury interior with designer lighting"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        <img src={heroHome} alt="Luxury interior with designer lighting" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 hero-overlay" />
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
           <p className="font-body text-sm tracking-[0.3em] uppercase text-primary mb-6 animate-fade-in">
             Innovating Spaces, Illuminating Lives
           </p>
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-light text-foreground mb-6 animate-fade-up">
-            HyperKryptic<br />
-            <span className="text-gradient-gold font-semibold">Global</span>
+            Hyper<span className="text-gradient-gold">Kryptic</span>
           </h1>
           <p className="font-body text-muted-foreground text-lg md:text-xl max-w-2xl mb-10 animate-fade-up" style={{ animationDelay: '0.2s' }}>
             Premium designer interior lights & luxury furniture, sourced from world-class manufacturers
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: '0.4s' }}>
-            <Link
-              to="/lights"
-              className="bg-primary text-primary-foreground px-8 py-4 font-body text-sm tracking-widest uppercase hover:opacity-90 transition-opacity"
-            >
+            <Link to="/lights" className="bg-primary text-primary-foreground px-8 py-4 font-body text-sm tracking-widest uppercase hover:opacity-90 transition-opacity">
               Explore Lights
             </Link>
-            <Link
-              to="/furniture"
-              className="border border-foreground/30 text-foreground px-8 py-4 font-body text-sm tracking-widest uppercase hover:border-primary hover:text-primary transition-colors"
-            >
+            <Link to="/furniture" className="border border-foreground/30 text-foreground px-8 py-4 font-body text-sm tracking-widest uppercase hover:border-primary hover:text-primary transition-colors">
               View Furniture
             </Link>
           </div>
@@ -56,7 +46,7 @@ const Index = () => {
               Curating Excellence<br />From the <span className="text-gradient-gold">World</span>
             </h2>
             <p className="font-body text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              HyperKryptic Global specializes in sourcing and importing innovative ceiling lights, track lighting systems, and premium interior furniture from world-class manufacturers. We bring India the best innovative interior designs and ideas from worldwide.
+              HyperKryptic specializes in sourcing and importing innovative ceiling lights, track lighting systems, and premium interior furniture from world-class manufacturers. We bring India the best innovative interior designs and ideas from worldwide.
             </p>
           </div>
 
@@ -137,6 +127,7 @@ const Index = () => {
         </div>
       </section>
 
+      <ContactForm />
       <Footer />
     </div>
   );
