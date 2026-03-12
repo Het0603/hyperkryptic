@@ -8,6 +8,8 @@ import heroLights from "@/assets/hero-lights.jpg";
 import heroFurniture from "@/assets/hero-furniture.jpg";
 import { ArrowRight, Lightbulb, Sofa, Globe, Award } from "lucide-react";
 
+import showroom1 from "@/assets/lights-showroom-1.png";
+import showroom2 from "@/assets/lights-showroom-2.png";
 import ms30UltraThinCover from "@/assets/ms30-ultra-thin-cover.jpg";
 import ms30LightModules from "@/assets/ms30-light-modules.jpg";
 import beltLinkHomeScene from "@/assets/beltlink-home-scene.jpg";
