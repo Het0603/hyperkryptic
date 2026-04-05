@@ -4,33 +4,31 @@ import ContactForm from "@/components/ContactForm";
 import heroLights from "@/assets/hero-lights.jpg";
 import showroom1 from "@/assets/lights-showroom-1.png";
 import showroom2 from "@/assets/lights-showroom-2.png";
-import ms30UltraThinCover from "@/assets/ms30-ultra-thin-cover.jpg";
-import ms30LightModules from "@/assets/ms30-light-modules.jpg";
 import beltLinkHomeScene from "@/assets/beltlink-home-scene.jpg";
-import beltLinkLightModules from "@/assets/beltlink-light-modules.jpg";
 import { Zap, Settings, Palette, Shield } from "lucide-react";
 
-const products = [
-  {
-    image: ms30UltraThinCover,
-    name: "MS30 Ultra Thin Magnetic Track",
-    desc: "5mm ultra-thin magnetic track system from the MS30 catalog, designed for hard-surface installation without false ceiling requirements.",
-  },
-  {
-    image: ms30LightModules,
-    name: "MS30 Track Light Modules",
-    desc: "Modular MS30 lineup including linear DF modules, TL spotlights, and LB series options to shape clean architectural lighting.",
-  },
-  {
-    image: beltLinkHomeScene,
-    name: "Belt Link Rope Light Applications",
-    desc: "Rope-light style decorative system for living rooms, bedrooms, and dining spaces with flexible routing for artistic lighting compositions.",
-  },
-  {
-    image: beltLinkLightModules,
-    name: "Belt Link Rope Light Modules",
-    desc: "BT30 module family from the 2026 catalog, featuring suspended, dome, and linear options for elegant rope-light installations.",
-  },
+import ms30Floodlight from "@/assets/lights/ms30-floodlight.jpg";
+import ms30Spotlight from "@/assets/lights/ms30-spotlight.jpg";
+import ms30Globe from "@/assets/lights/ms30-globe.jpg";
+import ms30DualSpot from "@/assets/lights/ms30-dual-spot.jpg";
+import ms30LinearBar from "@/assets/lights/ms30-linear-bar.jpg";
+import ms30TripleSpot from "@/assets/lights/ms30-triple-spot.jpg";
+import btGlassGlobe from "@/assets/lights/bt-glass-globe.jpg";
+import btDiscModule from "@/assets/lights/bt-disc-module.jpg";
+import btRopeLoop from "@/assets/lights/bt-rope-loop.jpg";
+import btCylinderSpot from "@/assets/lights/bt-cylinder-spot.jpg";
+
+const collection = [
+  { image: ms30Floodlight, name: "MS30 Floodlight Module", desc: "Ultra-slim magnetic floodlight with wide-angle beam for ambient wall washing." },
+  { image: ms30Spotlight, name: "MS30 Cylinder Spotlight", desc: "Precision COB spotlight with adjustable tilt for focused accent lighting." },
+  { image: ms30Globe, name: "MS30 Globe Spotlight", desc: "Spherical magnetic module with 360° rotation for artistic directional light." },
+  { image: ms30DualSpot, name: "MS30 Dual Spotlight", desc: "Twin-head magnetic spotlight for balanced, symmetrical accent illumination." },
+  { image: ms30LinearBar, name: "MS30 Linear LED Bar", desc: "Multi-lens linear module delivering clean, even downlight in narrow profiles." },
+  { image: ms30TripleSpot, name: "MS30 Triple Spotlight", desc: "Three-head cluster module for high-output focused lighting in retail and galleries." },
+  { image: btGlassGlobe, name: "Belt Link Glass Globe", desc: "Frosted glass orb pendant on rope track for soft, diffused decorative glow." },
+  { image: btDiscModule, name: "Belt Link Disc Module", desc: "Flat disc downlight module for minimalist ceiling-mounted rope installations." },
+  { image: btRopeLoop, name: "Belt Link Rope Loop", desc: "Flexible U-shaped rope connector for sculptural hanging light compositions." },
+  { image: btCylinderSpot, name: "Belt Link Cylinder Spot", desc: "Compact cylinder spotlight on rope track for warm directional accents." },
 ];
 
 const expertise = [
@@ -110,23 +108,23 @@ const LightsPage = () => {
         </div>
       </section>
 
-      {/* Products Grid */}
+      {/* Collection Grid */}
       <section className="py-24 px-6 bg-secondary">
         <div className="max-w-7xl mx-auto">
-          <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4 text-center">Products</p>
+          <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4 text-center">Collection</p>
           <h2 className="font-display text-4xl md:text-5xl font-light text-foreground text-center mb-16">
-            Track & Rope <span className="text-gradient-gold">Collection</span>
+            Our Light <span className="text-gradient-gold">Modules</span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {products.map((product, i) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {collection.map((item, i) => (
               <div key={i} className="group bg-card border border-border overflow-hidden hover:border-primary/30 transition-colors duration-500">
                 <div className="aspect-square overflow-hidden">
-                  <img src={product.image} alt={product.name} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src={item.image} alt={item.name} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
-                <div className="p-8">
-                  <h3 className="font-display text-2xl text-foreground mb-3">{product.name}</h3>
-                  <p className="font-body text-sm text-muted-foreground leading-relaxed">{product.desc}</p>
+                <div className="p-5">
+                  <h3 className="font-display text-lg text-foreground mb-1">{item.name}</h3>
+                  <p className="font-body text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}
