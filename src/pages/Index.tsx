@@ -27,7 +27,7 @@ import tableElegant from "@/assets/table-elegant-dt6604.webp";
 import cabinetElegant from "@/assets/cabinet-elegant-dx6606.webp";
 import cabinetModern from "@/assets/cabinet-modern-dx6604.webp";
 
-const backgroundPreloadAssets = [
+const subpageAssets = [
   heroLights,
   heroFurniture,
   showroom1,
@@ -54,7 +54,7 @@ const Index = () => {
     const prefetchedLinks: HTMLLinkElement[] = [];
 
     const timer = window.setTimeout(() => {
-      backgroundPreloadAssets.forEach((src) => {
+      subpageAssets.forEach((src) => {
         const image = new Image();
         image.decoding = "async";
         image.src = src;
@@ -67,7 +67,7 @@ const Index = () => {
       videoPrefetch.dataset.preload = "true";
       document.head.appendChild(videoPrefetch);
       prefetchedLinks.push(videoPrefetch);
-    }, 500);
+    }, 100);
 
     return () => {
       window.clearTimeout(timer);
