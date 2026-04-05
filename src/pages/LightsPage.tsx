@@ -60,6 +60,11 @@ const LightsPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Designer Interior Lights | Track & Rope Light Systems - HyperKryptic"
+        description="Explore premium magnetic track lights and rope light systems from world-class manufacturers. MS30 ultra-thin track lights, Belt Link rope lights, spotlights, pendants & more."
+        path="/lights"
+      />
       <Navbar />
 
       {/* Hero */}
