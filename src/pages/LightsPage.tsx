@@ -30,6 +30,8 @@ import btGlassGlobeOn from "@/assets/lights/bt-glass-globe-on.jpg";
 import btDiscModuleOn from "@/assets/lights/bt-disc-module-on.jpg";
 import btRopeLoopOn from "@/assets/lights/bt-rope-loop-on.jpg";
 import btCylinderSpotOn from "@/assets/lights/bt-cylinder-spot-on.jpg";
+import btClearGlobe from "@/assets/lights/bt-clear-globe.jpg";
+import btClearGlobeOn from "@/assets/lights/bt-clear-globe-on.jpg";
 
 const collection = [
   { image: ms30Floodlight, imageOn: ms30FloodlightOn, name: "MS30 Floodlight Module", desc: "Ultra-slim magnetic floodlight with wide-angle beam for ambient wall washing." },
@@ -42,6 +44,7 @@ const collection = [
   { image: btDiscModule, imageOn: btDiscModuleOn, name: "Belt Link Disc Module", desc: "Flat disc downlight module for minimalist ceiling-mounted rope installations." },
   { image: btRopeLoop, imageOn: btRopeLoopOn, name: "Belt Link Rope Loop", desc: "Flexible U-shaped rope connector for sculptural hanging light compositions." },
   { image: btCylinderSpot, imageOn: btCylinderSpotOn, name: "Belt Link Cylinder Spot", desc: "Compact cylinder spotlight on rope track for warm directional accents." },
+  { image: btClearGlobe, imageOn: btClearGlobeOn, name: "Belt Link Clear Globe", desc: "Transparent glass sphere with inner frosted bulb for elegant ambient illumination." },
 ];
 
 const expertise = [
