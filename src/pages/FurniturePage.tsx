@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 import heroFurniture from "@/assets/hero-furniture.webp";
@@ -41,6 +42,11 @@ const elegantProducts = [
 const FurniturePage = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Luxury Furniture Collection | Sofas, Chairs, Tables & Cabinets - HyperKryptic"
+        description="Discover premium imported furniture including modern, classic & elegant royal collections. Designer sofas, lounge chairs, dining tables, TV cabinets & beds from world-class manufacturers."
+        path="/furniture"
+      />
       <Navbar />
 
       {/* Hero */}

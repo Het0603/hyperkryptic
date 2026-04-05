@@ -1,6 +1,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
+import hkLogo from "@/assets/hk-logo.webp";
 
 const Navbar = () => {
   const location = useLocation();
@@ -32,9 +33,10 @@ const Navbar = () => {
   const isCategory = location.pathname === "/lights" || location.pathname === "/furniture";
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <Link to="/" className="font-display text-2xl font-semibold tracking-wider text-foreground">
+        <Link to="/" className="flex items-center gap-3 font-display text-2xl font-semibold tracking-wider text-foreground">
+          <img src={hkLogo} alt="HyperKryptic Logo" width={40} height={40} className="rounded-sm" />
           HYPER<span className="text-gradient-gold">KRYPTIC</span>
         </Link>
 
