@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
@@ -6,6 +7,7 @@ import showroom1 from "@/assets/lights-showroom-1.png";
 import showroom2 from "@/assets/lights-showroom-2.png";
 import beltLinkHomeScene from "@/assets/beltlink-home-scene.jpg";
 import { Zap, Settings, Palette, Shield } from "lucide-react";
+import { Switch } from "@/components/ui/switch";
 
 import ms30Floodlight from "@/assets/lights/ms30-floodlight.jpg";
 import ms30Spotlight from "@/assets/lights/ms30-spotlight.jpg";
@@ -18,17 +20,28 @@ import btDiscModule from "@/assets/lights/bt-disc-module.jpg";
 import btRopeLoop from "@/assets/lights/bt-rope-loop.jpg";
 import btCylinderSpot from "@/assets/lights/bt-cylinder-spot.jpg";
 
+import ms30FloodlightOn from "@/assets/lights/ms30-floodlight-on.jpg";
+import ms30SpotlightOn from "@/assets/lights/ms30-spotlight-on.jpg";
+import ms30GlobeOn from "@/assets/lights/ms30-globe-on.jpg";
+import ms30DualSpotOn from "@/assets/lights/ms30-dual-spot-on.jpg";
+import ms30LinearBarOn from "@/assets/lights/ms30-linear-bar-on.jpg";
+import ms30TripleSpotOn from "@/assets/lights/ms30-triple-spot-on.jpg";
+import btGlassGlobeOn from "@/assets/lights/bt-glass-globe-on.jpg";
+import btDiscModuleOn from "@/assets/lights/bt-disc-module-on.jpg";
+import btRopeLoopOn from "@/assets/lights/bt-rope-loop-on.jpg";
+import btCylinderSpotOn from "@/assets/lights/bt-cylinder-spot-on.jpg";
+
 const collection = [
-  { image: ms30Floodlight, name: "MS30 Floodlight Module", desc: "Ultra-slim magnetic floodlight with wide-angle beam for ambient wall washing." },
-  { image: ms30Spotlight, name: "MS30 Cylinder Spotlight", desc: "Precision COB spotlight with adjustable tilt for focused accent lighting." },
-  { image: ms30Globe, name: "MS30 Globe Spotlight", desc: "Spherical magnetic module with 360° rotation for artistic directional light." },
-  { image: ms30DualSpot, name: "MS30 Dual Spotlight", desc: "Twin-head magnetic spotlight for balanced, symmetrical accent illumination." },
-  { image: ms30LinearBar, name: "MS30 Linear LED Bar", desc: "Multi-lens linear module delivering clean, even downlight in narrow profiles." },
-  { image: ms30TripleSpot, name: "MS30 Triple Spotlight", desc: "Three-head cluster module for high-output focused lighting in retail and galleries." },
-  { image: btGlassGlobe, name: "Belt Link Glass Globe", desc: "Frosted glass orb pendant on rope track for soft, diffused decorative glow." },
-  { image: btDiscModule, name: "Belt Link Disc Module", desc: "Flat disc downlight module for minimalist ceiling-mounted rope installations." },
-  { image: btRopeLoop, name: "Belt Link Rope Loop", desc: "Flexible U-shaped rope connector for sculptural hanging light compositions." },
-  { image: btCylinderSpot, name: "Belt Link Cylinder Spot", desc: "Compact cylinder spotlight on rope track for warm directional accents." },
+  { image: ms30Floodlight, imageOn: ms30FloodlightOn, name: "MS30 Floodlight Module", desc: "Ultra-slim magnetic floodlight with wide-angle beam for ambient wall washing." },
+  { image: ms30Spotlight, imageOn: ms30SpotlightOn, name: "MS30 Cylinder Spotlight", desc: "Precision COB spotlight with adjustable tilt for focused accent lighting." },
+  { image: ms30Globe, imageOn: ms30GlobeOn, name: "MS30 Globe Spotlight", desc: "Spherical magnetic module with 360° rotation for artistic directional light." },
+  { image: ms30DualSpot, imageOn: ms30DualSpotOn, name: "MS30 Dual Spotlight", desc: "Twin-head magnetic spotlight for balanced, symmetrical accent illumination." },
+  { image: ms30LinearBar, imageOn: ms30LinearBarOn, name: "MS30 Linear LED Bar", desc: "Multi-lens linear module delivering clean, even downlight in narrow profiles." },
+  { image: ms30TripleSpot, imageOn: ms30TripleSpotOn, name: "MS30 Triple Spotlight", desc: "Three-head cluster module for high-output focused lighting in retail and galleries." },
+  { image: btGlassGlobe, imageOn: btGlassGlobeOn, name: "Belt Link Glass Globe", desc: "Frosted glass orb pendant on rope track for soft, diffused decorative glow." },
+  { image: btDiscModule, imageOn: btDiscModuleOn, name: "Belt Link Disc Module", desc: "Flat disc downlight module for minimalist ceiling-mounted rope installations." },
+  { image: btRopeLoop, imageOn: btRopeLoopOn, name: "Belt Link Rope Loop", desc: "Flexible U-shaped rope connector for sculptural hanging light compositions." },
+  { image: btCylinderSpot, imageOn: btCylinderSpotOn, name: "Belt Link Cylinder Spot", desc: "Compact cylinder spotlight on rope track for warm directional accents." },
 ];
 
 const expertise = [
@@ -39,6 +52,8 @@ const expertise = [
 ];
 
 const LightsPage = () => {
+  const [lightsOn, setLightsOn] = useState(false);
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -112,15 +127,27 @@ const LightsPage = () => {
       <section className="py-24 px-6 bg-secondary">
         <div className="max-w-7xl mx-auto">
           <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4 text-center">Collection</p>
-          <h2 className="font-display text-4xl md:text-5xl font-light text-foreground text-center mb-16">
+          <h2 className="font-display text-4xl md:text-5xl font-light text-foreground text-center mb-8">
             Our Light <span className="text-gradient-gold">Modules</span>
           </h2>
+
+          {/* Toggle */}
+          <div className="flex items-center justify-center gap-4 mb-16">
+            <span className={`font-body text-sm uppercase tracking-widest transition-colors duration-500 ${!lightsOn ? 'text-foreground' : 'text-muted-foreground'}`}>Off</span>
+            <Switch
+              checked={lightsOn}
+              onCheckedChange={setLightsOn}
+              className="data-[state=checked]:bg-primary"
+            />
+            <span className={`font-body text-sm uppercase tracking-widest transition-colors duration-500 ${lightsOn ? 'text-primary' : 'text-muted-foreground'}`}>On</span>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {collection.map((item, i) => (
               <div key={i} className="group bg-card border border-border overflow-hidden hover:border-primary/30 transition-colors duration-500">
-                <div className="aspect-square overflow-hidden">
-                  <img src={item.image} alt={item.name} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="aspect-square overflow-hidden relative">
+                  <img src={item.image} alt={item.name} loading="lazy" className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${lightsOn ? 'opacity-0' : 'opacity-100'}`} />
+                  <img src={item.imageOn} alt={`${item.name} illuminated`} loading="lazy" className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${lightsOn ? 'opacity-100' : 'opacity-0'}`} />
                 </div>
                 <div className="p-5">
                   <h3 className="font-display text-lg text-foreground mb-1">{item.name}</h3>
