@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
+import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 import heroLights from "@/assets/hero-lights.webp";

@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import SEO from "@/components/SEO";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 import heroFurniture from "@/assets/hero-furniture.webp";
