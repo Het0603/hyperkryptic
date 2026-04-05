@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
@@ -6,6 +7,7 @@ import showroom1 from "@/assets/lights-showroom-1.png";
 import showroom2 from "@/assets/lights-showroom-2.png";
 import beltLinkHomeScene from "@/assets/beltlink-home-scene.jpg";
 import { Zap, Settings, Palette, Shield } from "lucide-react";
+import { Switch } from "@/components/ui/switch";
 
 import ms30Floodlight from "@/assets/lights/ms30-floodlight.jpg";
 import ms30Spotlight from "@/assets/lights/ms30-spotlight.jpg";
@@ -17,6 +19,17 @@ import btGlassGlobe from "@/assets/lights/bt-glass-globe.jpg";
 import btDiscModule from "@/assets/lights/bt-disc-module.jpg";
 import btRopeLoop from "@/assets/lights/bt-rope-loop.jpg";
 import btCylinderSpot from "@/assets/lights/bt-cylinder-spot.jpg";
+
+import ms30FloodlightOn from "@/assets/lights/ms30-floodlight-on.jpg";
+import ms30SpotlightOn from "@/assets/lights/ms30-spotlight-on.jpg";
+import ms30GlobeOn from "@/assets/lights/ms30-globe-on.jpg";
+import ms30DualSpotOn from "@/assets/lights/ms30-dual-spot-on.jpg";
+import ms30LinearBarOn from "@/assets/lights/ms30-linear-bar-on.jpg";
+import ms30TripleSpotOn from "@/assets/lights/ms30-triple-spot-on.jpg";
+import btGlassGlobeOn from "@/assets/lights/bt-glass-globe-on.jpg";
+import btDiscModuleOn from "@/assets/lights/bt-disc-module-on.jpg";
+import btRopeLoopOn from "@/assets/lights/bt-rope-loop-on.jpg";
+import btCylinderSpotOn from "@/assets/lights/bt-cylinder-spot-on.jpg";
 
 const collection = [
   { image: ms30Floodlight, name: "MS30 Floodlight Module", desc: "Ultra-slim magnetic floodlight with wide-angle beam for ambient wall washing." },
