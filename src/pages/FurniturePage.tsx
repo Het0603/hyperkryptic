@@ -1,24 +1,24 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
-import heroFurniture from "@/assets/hero-furniture.jpg";
+import heroFurniture from "@/assets/hero-furniture.webp";
 
 // Modern
-import chairModern from "@/assets/chair-modern-b2520.jpg";
-import sofaModern from "@/assets/sofa-modern-madison.jpg";
-import tableModern from "@/assets/table-modern-dt6622.jpg";
+import chairModern from "@/assets/chair-modern-b2520.webp";
+import sofaModern from "@/assets/sofa-modern-madison.webp";
+import tableModern from "@/assets/table-modern-dt6622.webp";
 
 // Classic
-import chairClassic from "@/assets/chair-classic-b2517.jpg";
-import sofaClassic from "@/assets/sofa-classic-pierre.jpg";
-import cabinetClassic from "@/assets/cabinet-classic-dx6609.jpg";
+import chairClassic from "@/assets/chair-classic-b2517.webp";
+import sofaClassic from "@/assets/sofa-classic-pierre.webp";
+import cabinetClassic from "@/assets/cabinet-classic-dx6609.webp";
 
 // Elegant Royal
-import chairElegant from "@/assets/chair-elegant-b2515.jpg";
-import sofaElegant from "@/assets/sofa-elegant-freeman.jpg";
-import tableElegant from "@/assets/table-elegant-dt6604.jpg";
-import cabinetElegant from "@/assets/cabinet-elegant-dx6606.jpg";
-import cabinetModern from "@/assets/cabinet-modern-dx6604.jpg";
+import chairElegant from "@/assets/chair-elegant-b2515.webp";
+import sofaElegant from "@/assets/sofa-elegant-freeman.webp";
+import tableElegant from "@/assets/table-elegant-dt6604.webp";
+import cabinetElegant from "@/assets/cabinet-elegant-dx6606.webp";
+import cabinetModern from "@/assets/cabinet-modern-dx6604.webp";
 
 const modernProducts = [
   { image: sofaModern, name: "Madison Sofa", desc: "Clean-lined contemporary sofa with premium cotton-linen upholstery, carbon steel base, and goose down filling for unmatched comfort." },

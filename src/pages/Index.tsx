@@ -3,29 +3,29 @@ import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
-import heroHome from "@/assets/hero-home.jpg";
-import heroLights from "@/assets/hero-lights.jpg";
-import heroFurniture from "@/assets/hero-furniture.jpg";
+import heroHome from "@/assets/hero-home.webp";
+import heroLights from "@/assets/hero-lights.webp";
+import heroFurniture from "@/assets/hero-furniture.webp";
 import { ArrowRight, Lightbulb, Sofa, Globe, Award } from "lucide-react";
 
-import showroom1 from "@/assets/lights-showroom-1.png";
-import showroom2 from "@/assets/lights-showroom-2.png";
-import ms30UltraThinCover from "@/assets/ms30-ultra-thin-cover.jpg";
-import ms30LightModules from "@/assets/ms30-light-modules.jpg";
-import beltLinkHomeScene from "@/assets/beltlink-home-scene.jpg";
-import beltLinkLightModules from "@/assets/beltlink-light-modules.jpg";
+import showroom1 from "@/assets/lights-showroom-1.webp";
+import showroom2 from "@/assets/lights-showroom-2.webp";
+import ms30UltraThinCover from "@/assets/ms30-ultra-thin-cover.webp";
+import ms30LightModules from "@/assets/ms30-light-modules.webp";
+import beltLinkHomeScene from "@/assets/beltlink-home-scene.webp";
+import beltLinkLightModules from "@/assets/beltlink-light-modules.webp";
 
-import chairModern from "@/assets/chair-modern-b2520.jpg";
-import sofaModern from "@/assets/sofa-modern-madison.jpg";
-import tableModern from "@/assets/table-modern-dt6622.jpg";
-import chairClassic from "@/assets/chair-classic-b2517.jpg";
-import sofaClassic from "@/assets/sofa-classic-pierre.jpg";
-import cabinetClassic from "@/assets/cabinet-classic-dx6609.jpg";
-import chairElegant from "@/assets/chair-elegant-b2515.jpg";
-import sofaElegant from "@/assets/sofa-elegant-freeman.jpg";
-import tableElegant from "@/assets/table-elegant-dt6604.jpg";
-import cabinetElegant from "@/assets/cabinet-elegant-dx6606.jpg";
-import cabinetModern from "@/assets/cabinet-modern-dx6604.jpg";
+import chairModern from "@/assets/chair-modern-b2520.webp";
+import sofaModern from "@/assets/sofa-modern-madison.webp";
+import tableModern from "@/assets/table-modern-dt6622.webp";
+import chairClassic from "@/assets/chair-classic-b2517.webp";
+import sofaClassic from "@/assets/sofa-classic-pierre.webp";
+import cabinetClassic from "@/assets/cabinet-classic-dx6609.webp";
+import chairElegant from "@/assets/chair-elegant-b2515.webp";
+import sofaElegant from "@/assets/sofa-elegant-freeman.webp";
+import tableElegant from "@/assets/table-elegant-dt6604.webp";
+import cabinetElegant from "@/assets/cabinet-elegant-dx6606.webp";
+import cabinetModern from "@/assets/cabinet-modern-dx6604.webp";
 
 const backgroundPreloadAssets = [
   heroLights,
