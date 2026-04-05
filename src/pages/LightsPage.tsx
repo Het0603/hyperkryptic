@@ -52,6 +52,8 @@ const expertise = [
 ];
 
 const LightsPage = () => {
+  const [lightsOn, setLightsOn] = useState(false);
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
