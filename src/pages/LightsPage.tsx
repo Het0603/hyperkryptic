@@ -44,7 +44,7 @@ const collection = [
   { image: btDiscModule, imageOn: btDiscModuleOn, name: "Belt Link Disc Module", desc: "Flat disc downlight module for minimalist ceiling-mounted rope installations." },
   { image: btRopeLoop, imageOn: btRopeLoopOn, name: "Belt Link Rope Loop", desc: "Flexible U-shaped rope connector for sculptural hanging light compositions." },
   { image: btCylinderSpot, imageOn: btCylinderSpotOn, name: "Belt Link Cylinder Spot", desc: "Compact cylinder spotlight on rope track for warm directional accents." },
-  { image: btClearGlobe, imageOn: btClearGlobeOn, name: "Belt Link Clear Globe", desc: "Transparent glass sphere with inner frosted bulb for elegant ambient illumination." },
+  { image: btClearGlobe, imageOn: btClearGlobeOn, name: "Belt Link Mini Downlight", desc: "Compact COB cylinder on rope track for precise, warm accent downlighting." },
 ];
 
 const expertise = [
