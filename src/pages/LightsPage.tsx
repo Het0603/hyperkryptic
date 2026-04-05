@@ -32,16 +32,16 @@ import btRopeLoopOn from "@/assets/lights/bt-rope-loop-on.jpg";
 import btCylinderSpotOn from "@/assets/lights/bt-cylinder-spot-on.jpg";
 
 const collection = [
-  { image: ms30Floodlight, name: "MS30 Floodlight Module", desc: "Ultra-slim magnetic floodlight with wide-angle beam for ambient wall washing." },
-  { image: ms30Spotlight, name: "MS30 Cylinder Spotlight", desc: "Precision COB spotlight with adjustable tilt for focused accent lighting." },
-  { image: ms30Globe, name: "MS30 Globe Spotlight", desc: "Spherical magnetic module with 360° rotation for artistic directional light." },
-  { image: ms30DualSpot, name: "MS30 Dual Spotlight", desc: "Twin-head magnetic spotlight for balanced, symmetrical accent illumination." },
-  { image: ms30LinearBar, name: "MS30 Linear LED Bar", desc: "Multi-lens linear module delivering clean, even downlight in narrow profiles." },
-  { image: ms30TripleSpot, name: "MS30 Triple Spotlight", desc: "Three-head cluster module for high-output focused lighting in retail and galleries." },
-  { image: btGlassGlobe, name: "Belt Link Glass Globe", desc: "Frosted glass orb pendant on rope track for soft, diffused decorative glow." },
-  { image: btDiscModule, name: "Belt Link Disc Module", desc: "Flat disc downlight module for minimalist ceiling-mounted rope installations." },
-  { image: btRopeLoop, name: "Belt Link Rope Loop", desc: "Flexible U-shaped rope connector for sculptural hanging light compositions." },
-  { image: btCylinderSpot, name: "Belt Link Cylinder Spot", desc: "Compact cylinder spotlight on rope track for warm directional accents." },
+  { image: ms30Floodlight, imageOn: ms30FloodlightOn, name: "MS30 Floodlight Module", desc: "Ultra-slim magnetic floodlight with wide-angle beam for ambient wall washing." },
+  { image: ms30Spotlight, imageOn: ms30SpotlightOn, name: "MS30 Cylinder Spotlight", desc: "Precision COB spotlight with adjustable tilt for focused accent lighting." },
+  { image: ms30Globe, imageOn: ms30GlobeOn, name: "MS30 Globe Spotlight", desc: "Spherical magnetic module with 360° rotation for artistic directional light." },
+  { image: ms30DualSpot, imageOn: ms30DualSpotOn, name: "MS30 Dual Spotlight", desc: "Twin-head magnetic spotlight for balanced, symmetrical accent illumination." },
+  { image: ms30LinearBar, imageOn: ms30LinearBarOn, name: "MS30 Linear LED Bar", desc: "Multi-lens linear module delivering clean, even downlight in narrow profiles." },
+  { image: ms30TripleSpot, imageOn: ms30TripleSpotOn, name: "MS30 Triple Spotlight", desc: "Three-head cluster module for high-output focused lighting in retail and galleries." },
+  { image: btGlassGlobe, imageOn: btGlassGlobeOn, name: "Belt Link Glass Globe", desc: "Frosted glass orb pendant on rope track for soft, diffused decorative glow." },
+  { image: btDiscModule, imageOn: btDiscModuleOn, name: "Belt Link Disc Module", desc: "Flat disc downlight module for minimalist ceiling-mounted rope installations." },
+  { image: btRopeLoop, imageOn: btRopeLoopOn, name: "Belt Link Rope Loop", desc: "Flexible U-shaped rope connector for sculptural hanging light compositions." },
+  { image: btCylinderSpot, imageOn: btCylinderSpotOn, name: "Belt Link Cylinder Spot", desc: "Compact cylinder spotlight on rope track for warm directional accents." },
 ];
 
 const expertise = [
