@@ -127,15 +127,27 @@ const LightsPage = () => {
       <section className="py-24 px-6 bg-secondary">
         <div className="max-w-7xl mx-auto">
           <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4 text-center">Collection</p>
-          <h2 className="font-display text-4xl md:text-5xl font-light text-foreground text-center mb-16">
+          <h2 className="font-display text-4xl md:text-5xl font-light text-foreground text-center mb-8">
             Our Light <span className="text-gradient-gold">Modules</span>
           </h2>
+
+          {/* Toggle */}
+          <div className="flex items-center justify-center gap-4 mb-16">
+            <span className={`font-body text-sm uppercase tracking-widest transition-colors duration-500 ${!lightsOn ? 'text-foreground' : 'text-muted-foreground'}`}>Off</span>
+            <Switch
+              checked={lightsOn}
+              onCheckedChange={setLightsOn}
+              className="data-[state=checked]:bg-primary"
+            />
+            <span className={`font-body text-sm uppercase tracking-widest transition-colors duration-500 ${lightsOn ? 'text-primary' : 'text-muted-foreground'}`}>On</span>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {collection.map((item, i) => (
               <div key={i} className="group bg-card border border-border overflow-hidden hover:border-primary/30 transition-colors duration-500">
-                <div className="aspect-square overflow-hidden">
-                  <img src={item.image} alt={item.name} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="aspect-square overflow-hidden relative">
+                  <img src={item.image} alt={item.name} loading="lazy" className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${lightsOn ? 'opacity-0' : 'opacity-100'}`} />
+                  <img src={item.imageOn} alt={`${item.name} illuminated`} loading="lazy" className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${lightsOn ? 'opacity-100' : 'opacity-0'}`} />
                 </div>
                 <div className="p-5">
                   <h3 className="font-display text-lg text-foreground mb-1">{item.name}</h3>
