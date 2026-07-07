@@ -1,10 +1,19 @@
-import { createLovableConfig } from "lovable-agent-playwright-config/config";
+import { defineConfig } from "@playwright/test";
+import { defineBddConfig } from "playwright-bdd";
 
-export default createLovableConfig({
-  // Add your custom playwright configuration overrides here
-  // Example:
-  // timeout: 60000,
-  // use: {
-  //   baseURL: 'http://localhost:3000',
-  // },
+const testDir = defineBddConfig({
+  features: "e2e/features/**/*.feature",
+  steps: "e2e/steps/**/*.ts",
+});
+
+export default defineConfig({
+  testDir,
+  use: {
+    baseURL: "http://localhost:8080",
+  },
+  webServer: {
+    command: "npm run dev",
+    url: "http://localhost:8080",
+    reuseExistingServer: !process.env.CI,
+  },
 });
