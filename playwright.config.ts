@@ -1,10 +1,12 @@
-import { createLovableConfig } from "lovable-agent-playwright-config/config";
+import { defineConfig } from "@playwright/test";
+import { defineBddConfig } from "playwright-bdd";
 
-export default createLovableConfig({
-  // Add your custom playwright configuration overrides here
-  // Example:
-  // timeout: 60000,
-  // use: {
-  //   baseURL: 'http://localhost:3000',
-  // },
+const testDir = defineBddConfig({
+  features: "tests/features/**/*.feature",
+  steps: "tests/steps/**/*.ts",
+});
+
+export default defineConfig({
+  testDir,
+  reporter: "list",
 });
